@@ -58,6 +58,9 @@ while True:
     soru = input("Sorunuz: ")
     if soru.strip().lower() == "çıkış":
         break
+    if soru.strip() == "":
+        print("Lütfen bir soru yazın.\n")
+        continue
 
     bulunan_parcalar = en_alakali_parcalari_bul(soru)
     prompt = prompt_olustur(soru, bulunan_parcalar)
